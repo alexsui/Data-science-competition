@@ -21,7 +21,7 @@ python scrape_ptt.py push start_date end_date
 python scrape_ptt.py keyword {keyword} start_date end_date
 ```
 ### 任務二:
-> related file : 311707046_pred.py, image_processing.ipynb
+> related file : image_processing.ipynb -> model_training.ipynb -> 311707046_pred.py
 
 **訓練一個binary predictor預測圖片是否為popular(是否屬於推文數>35的ptt文章)**
 * **方法一 : 兩分類訓練**
