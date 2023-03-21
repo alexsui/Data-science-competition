@@ -47,3 +47,42 @@ python scrape_ptt.py keyword {keyword} start_date end_date
 5. Finetune Resnet，訓練Binary classfication。
 由於Resnet訓練時是用彩色照片，所以不可用grayscale transform在圖片上。此外，augmentation的方式選擇flip、rotation與jitter較適合。
 
+## HW2 : model compression
+> pruning.ipynb : 紀錄pruning的方法細節
+
+> 以下為 model_training&testing.ipynb的詳細內容
+
+此jupyter notebook主要分為九個部分，依序執行即可得到最後testing accuracy以及model的參數
+
+**1. Basic setting & data loading**
+* 將需使用的package import進來
+* 設定seed and device
+* load in data and transform
+
+**2. Load teacher model**
+* 將作業提供的參數讀進來作為teacher model
+
+**3. Build student model**
+* 用Depthwise-Separable-Convolution建立student model
+
+**4. Knowledge distillation**
+* 用KD將teacher model distill到student model
+
+**5. Testing accuracy for unpruned student_model**
+* 在testing data上進行測試，得到student model 在 pruning 前的準確度
+
+**6. Pruning student_model**
+* 對student model 進行pruning，使其參數量低於100000
+
+**7. Testing accuracy before retraining**
+* 測試pruning後student model在testing data的準確度
+
+**8. Retrain pruned student_model**
+* 重新訓練student model
+
+**9. Testing accuracy after retraining pruned student_model**
+* 測試不同epoch下retrained student model在testing data的準確度，從中選出最好的作為最終預測用的model參數，並將參數輸出為參數檔
+
+**10. Final testing : Load in final model for testing**
+* 將final weights for testing讀入並對testing data進行預測，輸出預測結果
+
