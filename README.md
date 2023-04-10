@@ -86,3 +86,21 @@ python scrape_ptt.py keyword {keyword} start_date end_date
 **10. Final testing : Load in final model for testing**
 * 將final weights for testing讀入並對testing data進行預測，輸出預測結果
 
+## Hw3 Few shot learning
+### Data
+* 5 ways 5 shots: 共五個類別，每個類別五張圖片
+### Algorithm
+**1. MAML** : 
+
+分為inner與outer loop，前者用**support set**(5 ways 5 shots)訓練模型，後者用訓練好的模型在query set(5 ways 5 shots)上測試並將loss更新到meta model上
+
+**2. Prototypical network** :
+
+將support set經過backbone encoder轉換為embedding後，計算各類別的平均embedding得到prototype，在以query set的embedding，計算各類別到其prototype的距離(cosine similarity/Euclidean distance)並做為loss更新
+
+**3. R2D2**
+
+### 其他技巧
+[Data Augmentation for Meta-Learning](https://arxiv.org/abs/2010.07092)
+1. Task augmentation : 增加原training dataset的類別數，e.g 對圖片做augmentation(rotation)產生新的類別
+3. Query augmentation:對query做augmentation,e.g. Cutmix、Selfmix
