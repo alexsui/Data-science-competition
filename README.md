@@ -90,9 +90,15 @@ python scrape_ptt.py keyword {keyword} start_date end_date
 ### Data
 * 5 ways 5 shots: 共五個類別，每個類別五張圖片
 ### Algorithm
+
+**相關套件:**
+[learn2learn](https://github.com/learnables/learn2learn/tree/0b9d3a3d540646307ca5debf8ad9c79ffe975e1c)
+
 **1. MAML** : 
 
 分為inner與outer loop，前者用**support set**(5 ways 5 shots)訓練模型，後者用訓練好的模型在query set(5 ways 5 shots)上測試並將loss更新到meta model上
+
+其他參考資源: [How to train your MAML](https://arxiv.org/abs/1810.09502)
 
 **2. Prototypical network** :
 
@@ -102,6 +108,9 @@ python scrape_ptt.py keyword {keyword} start_date end_date
 
 ### 其他技巧
 [Data Augmentation for Meta-Learning](https://arxiv.org/abs/2010.07092)
+
+[code](https://github.com/RenkunNi/MetaAug/blob/79d1a6a457be37258df50a9194946caeb86845a2/metadatas/taskaug.py)
+
 1. Task augmentation : 增加原training dataset的類別數，e.g 對圖片做augmentation(rotation)產生新的類別
 
    (Feature augmentation是直接對類別內的image做augmentation)
