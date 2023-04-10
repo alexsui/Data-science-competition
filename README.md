@@ -103,4 +103,7 @@ python scrape_ptt.py keyword {keyword} start_date end_date
 ### 其他技巧
 [Data Augmentation for Meta-Learning](https://arxiv.org/abs/2010.07092)
 1. Task augmentation : 增加原training dataset的類別數，e.g 對圖片做augmentation(rotation)產生新的類別
+
+   (Feature augmentation是直接對類別內的image做augmentation)
+
 3. Query augmentation:對query做augmentation,e.g. Cutmix、Selfmix
