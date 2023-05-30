@@ -116,3 +116,15 @@ python scrape_ptt.py keyword {keyword} start_date end_date
    (Feature augmentation是直接對類別內的image做augmentation)
 
 3. Query augmentation:對query做augmentation,e.g. Cutmix、Selfmix
+
+## Hw5 headline generation
+### Data
+a list of **(title,body)** dictionary
+### method
+huggingface -BART(效果最好)、T5
+
+連結 : 
+* summarization : https://huggingface.co/learn/nlp-course/chapter7/5?fw=pt
+* summarization : https://huggingface.co/docs/transformers/tasks/summarization#inference
+* BART : https://huggingface.co/docs/transformers/model_doc/bart#transformers.BartForConditionalGeneration
+* LORA : https://huggingface.co/blog/peft
