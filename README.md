@@ -120,11 +120,27 @@ python scrape_ptt.py keyword {keyword} start_date end_date
 ## Hw5 headline generation
 ### Data
 a list of **(title,body)** dictionary
-### method
+### Method
 huggingface -BART(效果最好)、T5
 
-連結 : 
+resource : 
 * summarization : https://huggingface.co/learn/nlp-course/chapter7/5?fw=pt
 * summarization : https://huggingface.co/docs/transformers/tasks/summarization#inference
 * BART : https://huggingface.co/docs/transformers/model_doc/bart#transformers.BartForConditionalGeneration
 * LORA : https://huggingface.co/blog/peft
+
+## Hw6 Node anomaly detection
+### Data
+**torch_geometric data format**
+
+https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.data.Data.html#torch_geometric.data.Data
+### Method
+* GCN
+* GAT
+* augmentation
+### Resource 
+* node classfication : https://colab.research.google.com/drive/14OvFnAXggxB8vM4e8vSURUp1TaKnovzX?usp=sharing
+* pytorch_geometric example : https://github.com/pyg-team/pytorch_geometric/tree/master/examples
+* Data format : https://pytorch-geometric.readthedocs.io/en/latest/generated/torch_geometric.data.Data.html#torch_geometric.data.Data
+* GNN intro(distill) : https://distill.pub/2021/gnn-intro/
+* graph augmentation lib : https://github.com/rish-16/grafog
