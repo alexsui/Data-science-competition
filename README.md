@@ -1,5 +1,8 @@
 # Data-science-project
 ## HW1 : A project for ptt scraping and bulid predictor
+### 比賽排名 : 5th/71 
+![image](https://github.com/alexsui/Data-science-project/assets/53047989/8d324b38-cedc-4ded-ad13-06947ab97638)
+
 ### 任務一:
 > related file : scrape_ptt.py
 
@@ -48,6 +51,7 @@ python scrape_ptt.py keyword {keyword} start_date end_date
 由於Resnet訓練時是用彩色照片，所以不可用grayscale transform在圖片上。此外，augmentation的方式選擇flip、rotation與jitter較適合。
 
 ## HW2 : model compression
+### 比賽排名 : 15th/58
 > pruning.ipynb : 紀錄pruning的方法細節
 
 > 以下為 model_training&testing.ipynb的詳細內容
@@ -87,6 +91,7 @@ python scrape_ptt.py keyword {keyword} start_date end_date
 * 將final weights for testing讀入並對testing data進行預測，輸出預測結果
 
 ## Hw3 Few shot learning
+### 比賽排名 : 7th/56
 ### Data
 * 5 ways 5 shots: 共五個類別，每個類別五張圖片
 ### Algorithm
@@ -118,6 +123,7 @@ python scrape_ptt.py keyword {keyword} start_date end_date
 3. Query augmentation:對query做augmentation,e.g. Cutmix、Selfmix
 
 ## Hw5 headline generation
+### 比賽排名 : 3th/46
 ### Data
 a list of **(title,body)** dictionary
 ### Method
@@ -130,6 +136,7 @@ resource :
 * LORA : https://huggingface.co/blog/peft
 
 ## Hw6 Node anomaly detection
+### 比賽排名 : 20th/47
 ### Data
 **torch_geometric data format**
 
