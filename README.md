@@ -1,4 +1,4 @@
-# Data-science-project
+# Data-science-competition
 ## HW1 : A project for ptt scraping and bulid predictor
 ### 比賽排名 : 5th/71 
 ![image](https://github.com/alexsui/Data-science-project/assets/53047989/8d324b38-cedc-4ded-ad13-06947ab97638)
